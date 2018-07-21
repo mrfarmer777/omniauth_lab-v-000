@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id]=@user.id
+
+    render 'welcome/home'
   end
 
 end

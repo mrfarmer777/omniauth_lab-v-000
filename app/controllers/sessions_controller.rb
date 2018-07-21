@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 
     #when facebook sends back a request to /auth/facebook/callback
     #this method will find or create the user using the :uid (provider id)
+    #woops! Forgot to make the 'auth' helper method once...
     @user=User.find_or_create_by(uid: auth['uid']) do |u|
         #it will use the info hash to assign data about the user to our database
         u.name=auth['info']['name']
@@ -15,6 +16,12 @@ class SessionsController < ApplicationController
 
     #it will render the welcome template
     render 'welcome/home'
+  end
+
+  private
+
+  def auth
+    request.env['omniauth.auth']
   end
 
 end

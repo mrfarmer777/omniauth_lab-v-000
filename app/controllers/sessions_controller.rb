@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
         #it will use the info hash to assign data about the user to our database
         u.name=auth['info']['name']
         u.email=auth['info']['email']
-        u.image=auth['info']['image']
     end
 
     #it will log the user in using the session hash

@@ -21,6 +21,7 @@ class SessionsController < ApplicationController
   private
 
   def auth
+    #? pulls the auth hash from the response as a json object
     request.env['omniauth.auth']
   end
 

@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         u.email=auth['info']['email']
         u.image=auth['info']['image']
     end
-    
+
     #it will log the user in using the session hash
     session[:user_id]=@user.id
 

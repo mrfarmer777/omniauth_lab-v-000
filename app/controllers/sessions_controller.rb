@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     #it will log the user in using the session hash
     session[:user_id]=@user.id
 
-    #it will render the welcome tempalte
+    #it will render the welcome template
     render 'welcome/home'
   end
 

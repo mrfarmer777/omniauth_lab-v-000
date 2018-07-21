@@ -20,7 +20,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 #handling the ENV variables with aplumb
-gem 'dotenv-rails'
+gem 'dotenv-rails'  #installing this AFTER making .env file. Hopefully not a problem
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

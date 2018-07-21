@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   root 'welcome#home'
 
   
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  #When facebook calls back after a login attempt, we'll catch it with sessions#create
+  get '/auth/facebook/callback' => 'sessions#create'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
